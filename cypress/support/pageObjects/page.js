@@ -1,7 +1,7 @@
 export default class Page {
     linkHeader = () => cy.get('.navbar-brand');
-    linkPlant = () => cy.get('//a[contains(text(),\'Plant\')]');
-    linkHardinessZone = () => cy.get('//a[contains(text(),\'HardinessZone\')]');
+    linkPlant = () => cy.get('#top-menu');
+    linkHardinessZone = () => cy.get('#top-menu');
     linkLogin = () => cy.get('.mr-4');
     linkSignUp = () => cy.get('.register-button');
     linkContact = () => cy.get('.me-2');
@@ -27,8 +27,8 @@ export default class Page {
 
     elementsExistsUser() {
         this.linkHeader().should('be.visible');
-        this.linkPlant().should('be.visible');
-        this.linkHardinessZone().should('be.visible');
+        this.linkPlant([0]).should('be.visible');
+        this.linkHardinessZone([1]).should('be.visible');
         this.header().should('be.visible');
         this.dropDownMenu().should('be.visible');
     };
@@ -59,15 +59,17 @@ export default class Page {
 
     labelsAreCorrectUser() {
         this.linkHeader().should('include.text', 'BotanicMap');
-        this.linkPlant().should('include.text', 'Plant');
-        this.linkHardinessZone().should('include.text', 'HardinessZone');
-        this.dropDownMenu().should('include.text', 'User User')
+        this.linkPlant([0]).should('include.text', 'Plant');
+        this.linkHardinessZone([1]).should('include.text', 'HardinessZone');
+        this.dropDownMenu().should('include.text', 'Tanya Karsova')
         this.header().should('include.text', 'Right plant, Right Place' + 'Growing plants in your location');
     };
 
     getStartedBtnIsClickable() {
       this.btnGetStarted().click();
     };
+
+
 
     goToLoginPage() {
         this.linkLogin().click();
@@ -83,18 +85,6 @@ export default class Page {
 
     goToHardinessZonePage() {
         this.linkHardinessZone().click();
-    };
-
-    goToContactPage() {
-        this.linkContact().click();
-    };
-
-    goToSubscribePage() {
-        this.linkSubscribe().click();
-    };
-
-    goToFAQPage() {
-        this.linkFAQ().click();
     };
 
     goToToSPage() {
