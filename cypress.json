@@ -1,4 +1,4 @@
 {
   "baseUrl": "https://botanicmap.com/",
-  "integrationFolder": "cypress/integration/smoke"
+  "integrationFolder": "cypress/integration/"
 }
