@@ -1,5 +1,7 @@
 export default class Page {
-    linkHeader = () => cy.get('.navbar-brand');
+
+    linkMainPage = () => cy.get('.site-name');
+    brandName = () => cy.get('.navbar-brand');
     linkPlant = () => cy.get('#top-menu');
     linkHardinessZone = () => cy.get('#top-menu');
     linkLogin = () => cy.get('.mr-4');
@@ -18,7 +20,7 @@ export default class Page {
     };
 
     elementsExistsGuest() {
-        this.linkHeader().should('be.visible');
+        this.brandName().should('be.visible');
         this.linkLogin().should('be.visible');
         this.linkSignUp().should('be.visible');
         this.header().should('be.visible');
@@ -26,7 +28,7 @@ export default class Page {
     };
 
     elementsExistsUser() {
-        this.linkHeader().should('be.visible');
+        this.brandName().should('be.visible');
         this.linkPlant([0]).should('be.visible');
         this.linkHardinessZone([1]).should('be.visible');
         this.header().should('be.visible');
@@ -50,7 +52,7 @@ export default class Page {
     }
 
     labelsAreCorrectGuest() {
-        this.linkHeader().should('include.text', 'BotanicMap');
+        this.brandName().should('include.text', 'BotanicMap');
         this.linkLogin().should('include.text', 'Log In');
         this.linkSignUp().should('include.text', 'Sign Up');
         this.header().should('include.text', 'Right plant, Right Place' + 'Growing plants in your location');
@@ -58,7 +60,7 @@ export default class Page {
     };
 
     labelsAreCorrectUser() {
-        this.linkHeader().should('include.text', 'BotanicMap');
+        this.brandName().should('include.text', 'BotanicMap');
         this.linkPlant([0]).should('include.text', 'Plant');
         this.linkHardinessZone([1]).should('include.text', 'HardinessZone');
         this.dropDownMenu().should('include.text', 'Tanya Karsova')
