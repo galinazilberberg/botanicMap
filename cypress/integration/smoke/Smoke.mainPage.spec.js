@@ -29,7 +29,7 @@ describe('Smoke tests for main page', () => {
         });
     });
 
-    describe.only('Role USER', () => {
+    describe('Role USER', () => {
 
         before('Login as User', () => {
             loginPage.open();
