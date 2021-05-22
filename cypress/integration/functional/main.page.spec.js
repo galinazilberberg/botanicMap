@@ -5,7 +5,7 @@ import ContactPage from "../../support/pageObjects/contact.page";
 import SubscribePage from "../../support/pageObjects/subscribe.page";
 import FAQPage from "../../support/pageObjects/FAQ.Page";
 import TOSPage from "../../support/pageObjects/termsOfService.page";
-import PPPage from "../../support/pageObjects/PrivacyPolicy.page";
+import PPPage from "../../support/pageObjects/privacyPolicy.page";
 
 describe('Functional tests for main page', () => {
 
