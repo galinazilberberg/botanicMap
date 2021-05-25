@@ -6,9 +6,9 @@ export default class Page {
     linkHardinessZone = () => cy.get('#top-menu');
     linkLogin = () => cy.get('.mr-4');
     linkSignUp = () => cy.get('.register-button');
-    linkContact = () => cy.get('.me-2');
-    linkSubscribe = () => cy.get('.me-2');
-    linkFAQ = () => cy.get('.me-2');
+    linkContact = () => cy.get('.mt-auto [class=\'me-2\']:nth-of-type(1)');
+    linkSubscribe = () => cy.get('.mt-auto [class=\'me-2\']:nth-of-type(2)');
+    linkFAQ = () => cy.get('.mt-auto [class=\'me-2\']:nth-of-type(3)');
     linkToS = () => cy.get('[data-qa="footerTerms"]');
     linkPP = () => cy.get('a.ms-4');
     dropDownMenu = () => cy.get('.ant-dropdown-link');
@@ -18,6 +18,33 @@ export default class Page {
     navigate() {
         cy.visit('')
     };
+
+    topMenuGuestExists() {
+        this.brandName().should('be.visible');
+        this.linkLogin().should('be.visible');
+        this.linkSignUp().should('be.visible');
+    };
+
+    topMenuUserExists() {
+        this.brandName().should('be.visible');
+        this.linkPlant([0]).should('be.visible');
+        this.linkHardinessZone([1]).should('be.visible');
+        this.dropDownMenu().should('be.visible');
+    };
+
+    topMenuGuestLabelsCorrect() {
+        this.brandName().should('include.text', 'BotanicMap');
+        this.linkLogin().should('include.text', 'Log In');
+        this.linkSignUp().should('include.text', 'Sign Up');
+    };
+
+    topMenuUserLabelsCorrect() {
+        this.brandName().should('include.text', 'BotanicMap');
+        this.linkPlant([0]).should('include.text', 'Plant');
+        this.linkHardinessZone([1]).should('include.text', 'HardinessZone');
+        this.dropDownMenu().should('include.text', 'Tanya Karsova')
+    };
+
 
     elementsExistsGuest() {
         this.brandName().should('be.visible');
@@ -70,8 +97,6 @@ export default class Page {
     getStartedBtnIsClickable() {
       this.btnGetStarted().click();
     };
-
-
 
     goToLoginPage() {
         this.linkLogin().click();
