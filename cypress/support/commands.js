@@ -1,3 +1,12 @@
+
+    Cypress.Commands.add('login', (email, password) => {
+        cy.get('a.mr-4').click();
+        cy.get('#normal_login_email').type(email);
+        cy.get('#normal_login_password').type(password);
+        cy.get('.login-form-button').click();
+    });
+
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -7,7 +16,6 @@
 // commands please read more here:
 // https://on.cypress.io/custom-commands
 // ***********************************************
-//
 //
 // -- This is a parent command --
 // Cypress.Commands.add('login', (email, password) => { ... })
