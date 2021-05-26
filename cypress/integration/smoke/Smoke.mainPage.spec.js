@@ -1,12 +1,13 @@
 import  Page  from '../../support/pageObjects/page';
 import RegisterPage from '../../support/pageObjects/register.Page';
 import LoginPage from '../../support/pageObjects/login.page';
+import data from '../../fixtures/example.json'
+
+const page = new Page();
+const registerPage = new RegisterPage();
+const loginPage = new LoginPage();
 
 describe('Smoke tests for main page', () => {
-
-    const page = new Page();
-    const registerPage = new RegisterPage();
-    const loginPage = new LoginPage();
 
     before(() => {
         page.navigate();
@@ -33,7 +34,7 @@ describe('Smoke tests for main page', () => {
 
         before('Login as User', () => {
             loginPage.open();
-            loginPage.userLogin('euphratus.tk@gmail.com', 'doc1020');
+            loginPage.userLogin(data.userEmail, data.userPassword);
         });
 
         it('elements exists',  () => {
