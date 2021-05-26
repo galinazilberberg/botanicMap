@@ -6,7 +6,8 @@ class LoginPage extends Page{
     fieldEmail = () => cy.get('#normal_login_email');
     fieldPassword = () => cy.get('#normal_login_password');
     btnSubmit = () => cy.get('.login-form-button');
-    prescription = () => cy.get('.ant-form-item-control-input-content')
+    prescription = () => cy.get('.ant-form-item:nth-child(5)');
+
 
 
     open() {
@@ -38,7 +39,7 @@ class LoginPage extends Page{
         this.fieldEmail().should('have.attr', 'placeholder', 'Email');
         this.fieldPassword().should('have.attr', 'placeholder', 'Password');
         this.btnSubmit().should('have.text', 'Log in');
-        this.prescription([3]).should('include.text', 'Don’t have an account?' + 'Create one' + 'Forgot your password? ' + 'Reset it');
+        this.prescription().should('include.text', 'Don’t have an account? Create one.' + 'Forgot your password? Reset it');
     }
 
     submitBtnIsEnabled(email, password) {
