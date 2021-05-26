@@ -1,5 +1,5 @@
 import LoginPage from "../../support/pageObjects/login.page";
-import {user} from "../../support/data/test.data";
+import data from "../../fixtures/example.json"
 
 const loginPage = new LoginPage();
 
@@ -18,6 +18,6 @@ describe('Smoke tests for login page', () => {
     });
 
     it('Submit button is enabled', () => {
-        loginPage.submitBtnIsEnabled(user.email, user.password);
+        loginPage.submitBtnIsEnabled(data.userEmail, data.userPassword);
     });
 })
