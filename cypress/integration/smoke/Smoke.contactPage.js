@@ -28,11 +28,11 @@ describe('smoke testing for contact page', () => {
         });
 
         it('Submit button enabled after required fields filled in', () => {
-            contactPage.btnSubmit(data.userFirstName, data.userEmail, data.userPassword, 'Some text')
+            contactPage.submitBtnEnabled(data.userFirstName, data.userEmail, data.userPassword, 'Some text')
         });
     });
 
-    describe.only('Role USER', () => {
+    describe('Role USER', () => {
 
        before(() => {
            loginPage.open();
@@ -54,7 +54,7 @@ describe('smoke testing for contact page', () => {
         });
 
         it('Submit button enabled after required fields filled in', () => {
-            contactPage.btnSubmit(data.userFirstName, data.userEmail, data.userPassword, 'Some text')
+            contactPage.submitBtnEnabled(data.userFirstName, data.userEmail, data.userPassword, 'Some text')
         });
     });
 });
