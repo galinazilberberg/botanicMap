@@ -1,9 +1,7 @@
 import ContactPage from "../../support/pageObjects/contact.page";
-import Page from "../../support/pageObjects/page";
 import LoginPage from "../../support/pageObjects/login.page";
 import data from "../../fixtures/example.json";
 
-const page = new Page();
 const contactPage = new ContactPage();
 const loginPage = new LoginPage();
 
@@ -16,15 +14,15 @@ describe('smoke testing for contact page', () => {
     describe('Role GUEST', () => {
 
         it('Elements exists', () => {
-            page.topMenuGuestExists();
+            contactPage.topMenuGuestExists();
             contactPage.elementsExists();
-            page.footerExist();
+            contactPage.footerExist();
         });
 
         it('Labels are correct', () => {
-            page.topMenuGuestLabelsCorrect();
+            contactPage.topMenuGuestLabelsCorrect();
             contactPage.labelsAreCorrect();
-            page.footerLabelsAreCorrect();
+            contactPage.footerLabelsAreCorrect();
         });
 
         it('Submit button enabled after required fields filled in', () => {
@@ -42,15 +40,15 @@ describe('smoke testing for contact page', () => {
        });
 
         it('Elements exists USER', () => {
-            page.topMenuUserExists();
+            contactPage.topMenuUserExists();
             contactPage.elementsExists();
-            page.footerExist();
+            contactPage.footerExist();
         });
 
         it('Labels are correct USER ',  () => {
-            page.topMenuUserLabelsCorrect();
+            contactPage.topMenuUserLabelsCorrect();
             contactPage.labelsAreCorrect();
-            page.footerLabelsAreCorrect();
+            contactPage.footerLabelsAreCorrect();
         });
 
         it('Submit button enabled after required fields filled in', () => {
