@@ -19,6 +19,10 @@ export default class Page {
         cy.visit('')
     };
 
+    isOpen() {
+        this.linkMainPage().should('be.visible');
+    }
+
     topMenuGuestExists() {
         this.brandName().should('be.visible');
         this.linkLogin().should('be.visible');
