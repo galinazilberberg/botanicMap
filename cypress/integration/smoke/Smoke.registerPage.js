@@ -1,5 +1,5 @@
 import RegisterPage from "../../support/pageObjects/register.Page";
-import {user} from "../../support/data/test.data";
+import data from "../../fixtures/example.json";
 
 const registerPage = new RegisterPage();
 
@@ -18,6 +18,6 @@ describe('Smoke testing for Register Page', () => {
     });
 
     it('Submit button enabled after filling required fields', () => {
-        registerPage.submitButtonIsEnabled('User', 'User', user.email, user.password);
+        registerPage.submitButtonIsEnabled(data.userFirstName, data.userLastName, data.userEmail, data.userPassword);
     });
 });
