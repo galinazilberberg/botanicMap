@@ -1,5 +1,6 @@
 export default class Page {
 
+    navBar = () => cy.get('.navbar-brand');
     linkMainPage = () => cy.get('.site-name');
     brandName = () => cy.get('.navbar-brand');
     linkPlant = () => cy.get('#top-menu');
@@ -20,7 +21,7 @@ export default class Page {
     };
 
     isOpen() {
-        this.linkMainPage().should('be.visible');
+        this.navBar().should('be.visible');
     }
 
     topMenuGuestExists() {
