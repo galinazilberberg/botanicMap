@@ -75,13 +75,23 @@ export default class Page {
         this.linkPP().should('be.visible');
     };
 
+    rightFooterExists() {
+        this.linkToS().should('be.visible');
+        this.linkPP().should('be.visible');
+    };
+
     footerLabelsAreCorrect() {
         this.linkContact([0]).should('include.text', 'Contact');
         this.linkSubscribe([1]).should('include.text', 'Subscribe');
         this.linkFAQ([2]).should('include.text', 'FAQ');
         this.linkToS().should('have.text', 'Terms of Service');
         this.linkPP().should('have.text', 'Privacy Policy');
-    }
+    };
+
+    rightFooterLabelsAreCorrect() {
+        this.linkToS().should('have.text', 'Terms of Service');
+        this.linkPP().should('have.text', 'Privacy Policy');
+    };
 
     labelsAreCorrectGuest() {
         this.brandName().should('include.text', 'BotanicMap');
