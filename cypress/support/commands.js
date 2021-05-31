@@ -1,9 +1,15 @@
+import LoginPage from "./pageObjects/login.page";
+import Page from "./pageObjects/page";
+
+const loginPage = new LoginPage();
+const page = new Page();
 
     Cypress.Commands.add('login', (email, password) => {
-        cy.get('a.mr-4').click();
-        cy.get('#normal_login_email').type(email);
-        cy.get('#normal_login_password').type(password);
-        cy.get('.login-form-button').click();
+        loginPage.open();
+        loginPage.fieldEmail().type(email);
+        loginPage.fieldPassword().type(password);
+        loginPage.btnSubmit().click();
+        page.isOpen();
     });
 
 
