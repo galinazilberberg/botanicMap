@@ -1,10 +1,8 @@
 import ContactPage from "../../support/pageObjects/contact.page";
-import LoginPage from "../../support/pageObjects/login.page";
 import data from "../../fixtures/example.json";
 import Page from "../../support/pageObjects/page";
 
 const contactPage = new ContactPage();
-const loginPage = new LoginPage();
 const page = new Page();
 
 describe('smoke testing for contact page', () => {

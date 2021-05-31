@@ -1,11 +1,9 @@
 import SubscribePage from "../../support/pageObjects/subscribe.page";
-import LoginPage from "../../support/pageObjects/login.page";
 import data from "../../fixtures/example.json";
 import Page from "../../support/pageObjects/page";
 
 
 const subscribePage = new SubscribePage();
-const loginPage = new LoginPage();
 const  page = new Page();
 
 describe('Smoke testing for subscribe page', () => {
