@@ -29,7 +29,7 @@ class SubscribePage extends Page{
 
     submitBtnIsEnabled(email) {
         this.fieldEmail().type(email);
-        this.btnSubmit().should('be.enabled');
+        this.btnSubmit().should('not.be.disabled');
     };
 }
 
