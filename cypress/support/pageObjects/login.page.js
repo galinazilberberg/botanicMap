@@ -1,7 +1,6 @@
 import Page from "./page";
-class LoginPage extends Page{
 
-    linkHeader = () => cy.get('.site-name');
+class LoginPage extends Page{
     header = () => cy.get('h1');
     fieldEmail = () => cy.get('#normal_login_email');
     fieldPassword = () => cy.get('#normal_login_password');
@@ -25,7 +24,6 @@ class LoginPage extends Page{
     }
 
     elementsExists() {
-        this.linkHeader().should('be.visible');
         this.header().should('be.visible');
         this.fieldEmail().should('be.visible');
         this.fieldPassword().should('be.visible');
@@ -34,7 +32,6 @@ class LoginPage extends Page{
     }
 
     labelsAreCorrect() {
-        this.linkHeader().should('have.text', 'BotanicMap');
         this.header().should('have.text', 'Welcome back!');
         this.fieldEmail().should('have.attr', 'placeholder', 'Email');
         this.fieldPassword().should('have.attr', 'placeholder', 'Password');

@@ -1,7 +1,6 @@
 import Page from "./page";
 
 class ResetPasswordPage extends Page{
-    linkHeader = () => cy.get('.site-name')
     header = () => cy.get('h1');
     instruction = () => cy.xpath('//p[contains(text(),\'Enter your account’s email address and we will sen\')]');
     fieldEmail = () => cy.get('#user_password_reset_email');
@@ -13,7 +12,6 @@ class ResetPasswordPage extends Page{
     }
 
     elementsExists() {
-        this.linkHeader().should('be.visible');
         this.header().should('be.visible');
         this.instruction().should('be.visible');
         this.fieldEmail().should('be.visible');
@@ -22,7 +20,6 @@ class ResetPasswordPage extends Page{
     };
 
     labelsAreCorrect() {
-        this.linkHeader().should('have.text', 'BotanicMap');
         this.header().should('have.text', 'BotanicMap reset password');
         this.instruction().should('have.text', 'Enter your account’s email address and we will send you a link to reset your password.');
         this.fieldEmail().should('have.attr', 'placeholder', 'Email');

@@ -10,10 +10,12 @@ describe('Smoke tests for login page', () => {
     });
 
     it('Elements exists', () => {
+        loginPage.siteNameExist();
         loginPage.elementsExists();
     });
 
     it('Labels are correct', () => {
+        loginPage.siteNameLabelIsCorrect();
         loginPage.labelsAreCorrect();
     });
 

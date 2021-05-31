@@ -50,6 +50,14 @@ export default class Page {
         this.dropDownMenu().should('include.text', 'Tanya Karsova')
     };
 
+    siteNameExist() {
+        this.linkMainPage().should('be.visible');
+    };
+
+    siteNameLabelIsCorrect() {
+        this.linkMainPage().should('have.text', 'BotanicMap');
+    };
+
 
     elementsExistsGuest() {
         this.brandName().should('be.visible');

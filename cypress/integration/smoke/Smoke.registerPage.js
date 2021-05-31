@@ -10,10 +10,12 @@ describe('Smoke testing for Register Page', () => {
     }) ;
 
     it('Elements exists', () => {
+        registerPage.siteNameExist();
         registerPage.elementsExists();
     });
 
     it('Labels are correct', () => {
+        registerPage.siteNameLabelIsCorrect();
         registerPage.labelsAreCorrect();
     });
 

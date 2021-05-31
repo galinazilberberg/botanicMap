@@ -10,10 +10,12 @@ describe('Smoke testing for Reset password page', () => {
     });
 
     it('Elements exists', () => {
+        resetPasswordPage.siteNameExist();
         resetPasswordPage.elementsExists();
     });
 
     it('Labels are correct', () => {
+        resetPasswordPage.siteNameLabelIsCorrect();
         resetPasswordPage.labelsAreCorrect();
     });
 
