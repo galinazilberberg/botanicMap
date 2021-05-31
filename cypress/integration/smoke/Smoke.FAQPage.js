@@ -1,9 +1,7 @@
 import FAQPage from "../../support/pageObjects/FAQ.Page";
 import data from "../../fixtures/example.json";
-import Page from "../../support/pageObjects/page";
 
 const faqPage = new FAQPage();
-const  page = new Page();
 
 describe('Smoke testing fo FAQ page', () => {
 

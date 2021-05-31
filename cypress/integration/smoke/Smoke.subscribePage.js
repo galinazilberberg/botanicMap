@@ -36,13 +36,11 @@ describe('Smoke testing for subscribe page', () => {
 
         before(() => {
             cy.login(data.userEmail, data.userPassword);
-            page.isOpen();
             subscribePage.open();
 
         });
 
         it('elements exists', () => {
-           // subscribePage.open();
             subscribePage.topMenuUserExists();
             subscribePage.elementsExists();
             subscribePage.footerExist();
