@@ -4,7 +4,7 @@ class FAQPage extends Page{
     header = () => cy.get('h4');
     instruction = () => cy.get('p');
     fieldMessage = () => cy.get('#message');
-    btnSubmit = () => cy.get('.ant-btn-primary')
+    btnSubmit = () => cy.get('[type="submit"]')
 
     open() {
         cy.visit('/faq')

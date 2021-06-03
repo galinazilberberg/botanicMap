@@ -7,7 +7,7 @@ class ContactPage extends Page{
     fieldEmail = () => cy.get('#normal_login_email');
     fieldPhone = () => cy.get('#normal_login_phone');
     fieldMessage = () => cy.get('#normal_login_message');
-    btnSubmit = () => cy.get('.login-form-button');
+    btnSubmit = () => cy.xpath('//span[contains(text(),\'Submit\')]');
 
 
     open() {

@@ -1,4 +1,5 @@
 {
   "baseUrl": "https://botanicmap.com/",
-  "integrationFolder": "cypress/integration/"
+  "integrationFolder": "cypress/integration/",
+  "projectId": "c4bxxm"
 }
