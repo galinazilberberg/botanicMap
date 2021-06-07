@@ -9,4 +9,16 @@ describe('Smoke testing for Plant page', () => {
        plantPage.open();
    });
 
+   it('Elements exists', () => {
+      plantPage.topMenuUserExists();
+      plantPage.elementsExists();
+      plantPage.footerExist();
+   });
+
+    it('Labels are correct', () => {
+        plantPage.topMenuUserLabelsCorrect();
+        plantPage.labelsAreCorrect();
+        plantPage.footerLabelsAreCorrect();
+    });
+
 });

@@ -1,9 +1,9 @@
 import Page from "./page";
 
 class PlantPage extends Page{
-    header = () => cy.get('');
+    header = () => cy.get('.h4');
     fieldPlantSearchParam1 = () => cy.xpath('//input[@id=\'plantSearchParam1\']');
-    fieldPlantSearchParam2 = () => cy.xpath('//input[@id=\'plantSearchParam1\']');
+    fieldPlantSearchParam2 = () => cy.xpath('//input[@id=\'plantSearchParam2\']');
     columnLabels = () => cy.get('.ant-table-thead');
     iconEdit = () => cy.get('.edit-pen-icon');
     iconDropdownMenu = () => cy.get('.ant-dropdown-trigger');
