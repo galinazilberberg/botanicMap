@@ -17,7 +17,7 @@ export default class Page {
     btnGetStarted = () => cy.get('.ant-btn-primary');
 
     navigate() {
-        cy.visit('')
+        cy.visit('');
     };
 
     isOpen() {
@@ -144,5 +144,4 @@ export default class Page {
     goToPPPage() {
         this.linkPP().click();
     }
-
 }

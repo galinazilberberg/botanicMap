@@ -4,7 +4,7 @@ class LoginPage extends Page{
     header = () => cy.get('h1');
     fieldEmail = () => cy.get('#normal_login_email');
     fieldPassword = () => cy.get('#normal_login_password');
-    btnSubmit = () => cy.get('.login-form-button');
+    btnSubmit = () => cy.get('[type="submit"]');
     prescription = () => cy.get('.ant-form-item:nth-child(5)');
 
 
