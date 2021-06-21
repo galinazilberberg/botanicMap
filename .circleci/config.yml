@@ -6,5 +6,5 @@ worckflows:
     jobs:
       -cypress/run
     verify-command: yarn cypress verify
-      build: "npm run build"
+      build: npm run build
         record: true
