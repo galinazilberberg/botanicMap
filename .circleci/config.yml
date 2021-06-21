@@ -1,0 +1,9 @@
+version: 2.1
+orbs:
+  cypress: cypress-io/cyperss@1.0.0
+worckflows:
+  build:
+    jobs:
+      -cypress/run:
+        build: "npm run build"
+        record: true
