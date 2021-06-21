@@ -4,7 +4,12 @@ orbs:
 worckflows:
   build:
     jobs:
-      -cypress/run
-    verify-command: yarn cypress verify
-      build: npm run test
-        record: true
+      - cypress/install:
+          build: 'npm run build' # run a custom app build step
+            - cypress/run:
+                requires:
+                  - cypress/install
+                record: true
+                group: 'all tests'
+                start: 'npm start'
+
