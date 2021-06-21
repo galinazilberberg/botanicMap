@@ -4,11 +4,12 @@ orbs:
 worckflows:
   build:
     jobs:
-      - cypress/install:
-          build: npm run build # run a custom app build step
+      - cypress/install
+
             - cypress/run:
                 requires:
                   - cypress/install
+                  - build: 'npm run build' # run a custom app build step
                 record: true
                 group: all tests
                 start: npm start
