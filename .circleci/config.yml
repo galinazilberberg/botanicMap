@@ -1,9 +1,10 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cyperss@1.0.0
+  cypress: cypress-io/cypress@1.28.0
 worckflows:
   build:
     jobs:
-      -cypress/run:
-        build: "npm run build"
+      -cypress/run
+    verify-command: yarn cypress verify
+      build: "npm run build"
         record: true
