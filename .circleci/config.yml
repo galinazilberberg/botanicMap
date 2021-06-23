@@ -6,4 +6,4 @@ orbs:
 workflows:
   orb-free-workflow:
     jobs:
-      - test
+      - cypress/run
