@@ -33,7 +33,7 @@ class ContactPage extends Page{
         this.instruction().should('have.text', 'If you have any questions to us, please fill out and submit the following form.');
         this.fieldName().should('have.attr', 'placeholder', 'Name');
         this.fieldEmail().should('have.attr', 'placeholder', 'Email');
-        this.fieldPhone().should('have.attr', 'placeholder', "Cell phone number '17775551122'");
+        this.fieldPhone().should('have.attr', 'placeholder', "Cell phone number '17775551122' ");
         this.fieldMessage().should('have.attr', 'placeholder', 'Message');
         this.btnSubmit().should('have.text', 'Submit');
     };

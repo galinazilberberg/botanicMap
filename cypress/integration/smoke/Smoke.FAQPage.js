@@ -14,13 +14,13 @@ describe('Smoke testing fo FAQ page', () => {
         it('Elements exists', () => {
             faqPage.topMenuGuestExists();
             faqPage.elementsExists();
-            faqPage.footerExist();
+            // faqPage.footerExist();
         });
 
         it('Labels are correct', () => {
             faqPage.topMenuGuestLabelsCorrect();
             faqPage.labelsAreCorrect();
-            faqPage.footerLabelsAreCorrect();
+            // faqPage.footerLabelsAreCorrect();
         });
 
         it('Submit button is enabled', () => {
@@ -38,13 +38,13 @@ describe('Smoke testing fo FAQ page', () => {
         it('Elements exists', () => {
             faqPage.topMenuUserExists();
             faqPage.elementsExists();
-            faqPage.footerExist();
+            // faqPage.footerExist();
         });
 
         it('Labels are correct', () => {
             faqPage.topMenuUserLabelsCorrect();
             faqPage.labelsAreCorrect();
-            faqPage.footerLabelsAreCorrect();
+            // faqPage.footerLabelsAreCorrect();
         });
 
         it('Submit button is enabled', () => {
