@@ -22,7 +22,7 @@ class FAQPage extends Page{
     };
 
     labelsAreCorrect() {
-        this.header().should('have.text', 'FREQUENTLY ASKED QUESTIONS');
+        this.header().should('have.text', 'Frequently asked questions');
         this.instruction().should('have.text', 'Have we missed anything? Ask us a question!');
         this.fieldMessage().should('have.attr', 'placeholder', 'Message');
         this.btnSubmit().should('have.text', 'Submit');
