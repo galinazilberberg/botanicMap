@@ -7,5 +7,3 @@ workflows:
   build:
     jobs:
       - cypress/run:
-          record: true
-          cypress run: --record --key 7bf08725-9ed3-4c02-ab62-3a67a8b5796f
