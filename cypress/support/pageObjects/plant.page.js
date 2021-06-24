@@ -9,6 +9,7 @@ class PlantPage extends Page{
     iconDropdownMenu = () => cy.get('.ant-dropdown-trigger');
     btnReset = () => cy.xpath('//span[contains(text(),\'Reset\')]');
     btnCreatePlant = () => cy.get('.ant-btn-primary');
+    createPlantHeader = () => cy.get
 
     open() {
         cy.visit('/plant');

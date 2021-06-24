@@ -25,7 +25,7 @@ describe('smoke testing for contact page', () => {
             contactPage.footerLabelsAreCorrect();
         });
 
-        it('Submit button enabled after required fields filled in', () => {
+        it.skip('Submit button enabled after required fields filled in', () => {
             contactPage.submitBtnEnabled(data.userFirstName, data.userEmail, data.userPassword, 'Some text')
         });
     });
@@ -51,7 +51,7 @@ describe('smoke testing for contact page', () => {
             contactPage.footerLabelsAreCorrect();
         });
 
-        it('Submit button enabled after required fields filled in', () => {
+        it.skip('Submit button enabled after required fields filled in', () => {
             contactPage.submitBtnEnabled(data.userFirstName, data.userEmail, data.userPassword, 'Some text')
         });
     });
