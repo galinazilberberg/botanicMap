@@ -4,6 +4,7 @@ orbs:
   cypress: cypress-io/cypress@1.28.0
 
 workflows:
-  orb-free-workflow:
+  build:
     jobs:
-      - cypress/run
+      - cypress/run:
+          record: true
