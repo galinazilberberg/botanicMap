@@ -8,4 +8,4 @@ workflows:
     jobs:
       - cypress/run:
           record: true
-          key: 3d6bdca8-00a5-46e3-9565-f9c4585a4259
+          key: projectId
