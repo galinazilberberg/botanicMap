@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "bin": "./node_modules/.bin/cypress open"
+    "test": "cypress run --browser chrome",
+    "test:headless": "cypress run --headless",
+    "bin": "./node_modules/.bin/cypress open",
+    "cypress run": [],
+    "run:record": "--key, 3d6bdca8-00a5-46e3-9565-f9c4585a4259"
   },
   "repository": {
     "type": "git",

@@ -14,13 +14,13 @@ describe('Smoke testing for Privacy policy page page', () => {
         it('Elements exists',  () => {
             ppPage.topMenuGuestExists();
             ppPage.elementsExists();
-            ppPage.footerExist();
+            // ppPage.footerExist();
         });
 
         it('Labels are correct', () => {
             ppPage.topMenuGuestLabelsCorrect();
             ppPage.elementsExists();
-            ppPage.footerLabelsAreCorrect();
+            // ppPage.footerLabelsAreCorrect();
         });
     });
 
@@ -34,13 +34,13 @@ describe('Smoke testing for Privacy policy page page', () => {
         it('Elements exists',  () => {
             ppPage.topMenuUserExists();
             ppPage.elementsExists();
-            ppPage.footerExist();
+            // ppPage.footerExist();
         });
 
         it('Labels are correct', () => {
             ppPage.topMenuUserLabelsCorrect();
             ppPage.elementsExists();
-            ppPage.footerLabelsAreCorrect();
+            // ppPage.footerLabelsAreCorrect();
         });
     });
 });

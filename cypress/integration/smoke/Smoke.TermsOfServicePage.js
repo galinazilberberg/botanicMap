@@ -14,13 +14,13 @@ describe('Smoke testing for Terms of Service page', () => {
         it('Elements exists',  () => {
             tosPage.topMenuGuestExists();
             tosPage.elementsExists();
-            tosPage.footerExist();
+            // tosPage.footerExist();
         });
 
         it('Labels are correct', () => {
             tosPage.topMenuGuestLabelsCorrect();
             tosPage.elementsExists();
-            tosPage.footerLabelsAreCorrect();
+            // tosPage.footerLabelsAreCorrect();
         });
     });
 
@@ -34,13 +34,13 @@ describe('Smoke testing for Terms of Service page', () => {
         it('Elements exists',  () => {
             tosPage.topMenuUserExists();
             tosPage.elementsExists();
-            tosPage.footerExist();
+            // tosPage.footerExist();
         });
 
         it('Labels are correct', () => {
             tosPage.topMenuUserLabelsCorrect();
             tosPage.elementsExists();
-            tosPage.footerLabelsAreCorrect();
+            // tosPage.footerLabelsAreCorrect();
         });
     });
 });

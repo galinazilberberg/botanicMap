@@ -12,13 +12,13 @@ describe('Smoke testing for Plant page', () => {
    it('Elements exists', () => {
       plantPage.topMenuUserExists();
       plantPage.elementsExists();
-      plantPage.footerExist();
+      // plantPage.footerExist();
    });
 
     it('Labels are correct', () => {
         plantPage.topMenuUserLabelsCorrect();
         plantPage.labelsAreCorrect();
-        plantPage.footerLabelsAreCorrect();
+        // plantPage.footerLabelsAreCorrect();
     });
 
 });
